@@ -1,3 +1,15 @@
 <h1>Items#new</h1>
 <p>Find me in app/views/items/new.html.erb</p>
-<p>こんにちわ！</p>
+<p>こんにちわ！<%= @name %> </p>
+<p>
+「<%= @title %>」の値段は<%= @price %>円です。
+</p>
+
+<p>
+<%= link_to 'Search', 'http://www.google.co.jp/' %>
+</p>
+
+<p>
+<%= link_to 'Index Page', '/friends' %>
+</p>
+<%= image_tag 'neko.jpg' %>
