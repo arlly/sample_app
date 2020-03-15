@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Address</th>
       <th colspan="3"></th>
@@ -14,6 +15,7 @@
   <tbody>
     <% @friends.each do |friend| %>
       <tr>
+        <td><%= friend.id %></td>
         <td><%= friend.name %></td>
         <td><%= friend.address %></td>
         <td><%= link_to 'Show', friend %></td>
@@ -23,7 +25,7 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
+<%= will_paginate @friends %>
 
 <%= link_to 'New Friend', new_friend_path %>

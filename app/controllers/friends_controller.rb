@@ -1,10 +1,11 @@
 class FriendsController < ApplicationController
   before_action :set_friend, only: [:show, :edit, :update, :destroy]
+  
 
   # GET /friends
   # GET /friends.json
   def index
-    @friends = Friend.all
+    @friends = Friend.paginate(page: params[:page], per_page: 5)
   end
 
   # GET /friends/1
